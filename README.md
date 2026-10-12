@@ -13,7 +13,7 @@ The GIFs show a sample of each pet's animations. The installable assets are tran
 You need the **Codex desktop app with Pets enabled**. These assets are for its pet companion feature, not a standalone desktop application.
 
 1. [Download this repository as a ZIP](https://github.com/phykn/woogi/archive/refs/heads/main.zip) and extract it, or run `git clone https://github.com/phykn/woogi.git`.
-2. Open a terminal in the extracted `woogi-main` folder (or the cloned `woogi` folder). Run one command below.
+2. Open a terminal in the extracted `woogi-main` folder (or the cloned `woogi` folder). Run the command for your preferred style below, or run both to install both pets.
 3. Allow the link to open Codex and confirm the pet installation in the app.
 4. Open **Settings → Pets**, select **Woogi** or **Woogi Pixel**, and use `/pet` or **Show pet** to display it. Older app versions may put Pets under **Settings → Appearance**.
 
