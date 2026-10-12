@@ -1,6 +1,11 @@
 #!/bin/sh
 set -eu
 
+if [ "$#" -gt 2 ] || { [ "$#" -eq 2 ] && [ "$2" != '--print-link' ]; }; then
+    printf '%s\n' 'Usage: sh install.sh [woogi|pixel] [--print-link]' >&2
+    exit 1
+fi
+
 case "${1:-woogi}" in
     woogi) name='Woogi'; folder='woogi' ;;
     pixel) name='Woogi%20Pixel'; folder='woogi-pixel' ;;
@@ -12,5 +17,5 @@ if [ "${2:-}" = '--print-link' ]; then
     printf '%s\n' "$link"
 else
     open "$link"
-    printf '%s\n' 'Confirm installation in Codex, then select your pet in Settings > Pets.'
+    printf '%s\n' 'In Codex, confirm the installation, then choose your pet in Settings > Pets.'
 fi

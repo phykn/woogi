@@ -11,7 +11,8 @@ SEQUENCE = [(0, 6, 180), (3, 4, 180), (4, 5, 140), (1, 8, 100)]
 
 
 def build(folder):
-    sheet = Image.open(ROOT / 'pets' / folder / 'spritesheet.png').convert('RGBA')
+    with Image.open(ROOT / 'pets' / folder / 'spritesheet.png') as source:
+        sheet = source.convert('RGBA')
     if sheet.size != (1536, 2288):
         raise ValueError(f'{folder}: expected a 1536 x 2288 v2 sprite sheet')
     frames, durations = [], []
@@ -25,8 +26,15 @@ def build(folder):
             durations.append(duration)
     output = ROOT / 'previews' / f'{folder}.gif'
     output.parent.mkdir(exist_ok=True)
-    frames[0].save(output, save_all=True, append_images=frames[1:],
-                   duration=durations, loop=0, disposal=2, optimize=False)
+    frames[0].save(
+        output,
+        save_all=True,
+        append_images=frames[1:],
+        duration=durations,
+        loop=0,
+        disposal=2,
+        optimize=False,
+    )
     print(f'{output.name}: {len(frames)} frames')
 
 

@@ -13,6 +13,6 @@ $link = 'codex://pets/install?name=' + [Uri]::EscapeDataString($name) +
 if ($PrintLink) {
     Write-Output $link
 } else {
-    Start-Process -FilePath $link
-    Write-Output "Confirm installation in Codex, then select $name in Settings > Pets."
+    Start-Process -FilePath $link -ErrorAction Stop
+    Write-Output "In Codex, confirm the installation, then choose $name in Settings > Pets."
 }
