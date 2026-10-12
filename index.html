@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Add Woogi, a custom animated fox pet, to the Codex desktop app. Choose the 3D or pixel-art style.">
+  <title>Woogi · Install a Codex Pet</title>
+  <style>
+    :root { color-scheme: light dark; --bg: #f2f5f9; --card: #fff; --text: #18263e; --muted: #536175; --border: #dce3ec; --accent: #087e8b; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, sans-serif; }
+    main { max-width: 800px; margin: auto; padding: 56px 24px 32px; }
+    header { text-align: center; margin-bottom: 32px; }
+    .label { color: var(--accent); font-weight: 700; letter-spacing: .12em; font-size: 12px; }
+    h1 { font-size: clamp(32px, 6vw, 46px); line-height: 1.2; margin: 12px 0; }
+    h2 { margin: 0 0 4px; font-size: 23px; }
+    p { margin: 8px 0; }
+    .intro, .style, footer { color: var(--muted); }
+    .pets { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    article { text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 24px; scroll-margin-top: 24px; }
+    article:target { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .preview { display: block; width: 192px; height: 208px; max-width: 100%; object-fit: contain; margin: 12px auto 20px; border-radius: 12px; }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    .button { display: block; padding: 12px 18px; color: #fff; background: #087e8b; border-radius: 10px; text-decoration: none; font-weight: 700; }
+    .button:hover { background: #066672; }
+    a:focus-visible { outline: 3px solid #25b6cc; outline-offset: 4px; }
+    .steps { max-width: 640px; margin: 30px auto 0; }
+    ol { padding-left: 24px; }
+    li { margin: 8px 0; }
+    details { border-top: 1px solid var(--border); padding-top: 16px; color: var(--muted); }
+    summary { cursor: pointer; font-weight: 600; color: var(--text); }
+    footer { text-align: center; margin-top: 32px; font-size: 13px; }
+    @media (max-width: 540px) { main { padding: 32px 20px; } .pets { grid-template-columns: 1fr; } }
+    @media (prefers-color-scheme: dark) { :root { --bg: #111b2a; --card: #1c293b; --text: #edf2fa; --muted: #b6c3d5; --border: #35465c; --accent: #68d5de; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="label">CUSTOM CODEX PET</div>
+      <h1>Meet Woogi.</h1>
+      <p class="intro">A little research fox for your Codex desktop app.<br>Choose a style. Add your companion.</p>
+    </header>
+    <section class="pets" aria-label="Choose a pet style">
+      <article id="woogi">
+        <h2>Woogi</h2>
+        <p class="style">Soft 3D style</p>
+        <img class="preview" src="previews/woogi.gif" width="192" height="208" alt="Woogi blinking, waving, jumping, and walking">
+        <a class="button" href="codex://pets/install?name=Woogi&amp;imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fphykn%2Fwoogi%2Fmain%2Fpets%2Fwoogi%2Fspritesheet.png&amp;spriteVersionNumber=2" aria-label="Add Woogi to Codex">Add to Codex</a>
+      </article>
+      <article id="woogi-pixel">
+        <h2>Woogi Pixel</h2>
+        <p class="style">Crisp pixel art</p>
+        <img class="preview" src="previews/woogi-pixel.gif" width="192" height="208" alt="Woogi Pixel blinking, waving, jumping, and walking">
+        <a class="button" href="codex://pets/install?name=Woogi%20Pixel&amp;imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fphykn%2Fwoogi%2Fmain%2Fpets%2Fwoogi-pixel%2Fspritesheet.png&amp;spriteVersionNumber=2" aria-label="Add Woogi Pixel to Codex">Add to Codex</a>
+      </article>
+    </section>
+    <section class="steps" aria-label="Installation instructions">
+      <ol>
+        <li>Click <strong>Add to Codex</strong> and allow your browser to open the app.</li>
+        <li>Confirm the pet installation in Codex.</li>
+        <li>Choose your pet in <strong>Settings → Pets</strong>, then use <strong>/pet</strong> or <strong>Show pet</strong>.</li>
+      </ol>
+      <p>Requires the <strong>Codex desktop app with Pets enabled</strong> on your computer. No terminal commands or ZIP downloads needed.</p>
+      <details>
+        <summary>Codex didn't open?</summary>
+        <p>Update Codex, open it once, and try again. Allow the browser's prompt to open the app. If your account or app does not have Pets, these links will not install a pet.</p>
+        <p>Older versions may list Pets under Settings → Appearance. You can also try the <a href="https://github.com/phykn/woogi#install-in-codex">alternative script instructions</a> or read the <a href="https://learn.chatgpt.com/docs/pets?surface=app">official Pets guide</a>.</p>
+      </details>
+    </section>
+    <footer><a href="https://github.com/phykn/woogi">Source &amp; MIT license</a> · Independent community artwork.</footer>
+  </main>
+</body>
+</html>

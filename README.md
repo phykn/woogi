@@ -5,6 +5,7 @@ A custom animated fox pet for the **Codex desktop app**, available in two styles
 | Woogi | Woogi Pixel |
 | :---: | :---: |
 | ![Woogi animated preview](previews/woogi.gif) | ![Woogi Pixel animated preview](previews/woogi-pixel.gif) |
+| **[Install Woogi](https://phykn.github.io/woogi/#woogi)** | **[Install Woogi Pixel](https://phykn.github.io/woogi/#woogi-pixel)** |
 
 The GIFs show a sample of each pet's animations. The installable assets are transparent PNG sprite sheets, not 3D model files.
 
@@ -12,10 +13,16 @@ The GIFs show a sample of each pet's animations. The installable assets are tran
 
 You need the **Codex desktop app with Pets enabled**. These assets are for its pet companion feature, not a standalone desktop application.
 
-1. [Download this repository as a ZIP](https://github.com/phykn/woogi/archive/refs/heads/main.zip) and extract it, or run `git clone https://github.com/phykn/woogi.git`.
-2. Open a terminal in the extracted `woogi-main` folder (or the cloned `woogi` folder). Run the command for your preferred style below, or run both to install both pets.
-3. Allow the link to open Codex and confirm the pet installation in the app.
-4. Open **Settings → Pets**, select **Woogi** or **Woogi Pixel**, and use `/pet` or **Show pet** to display it. Older app versions may put Pets under **Settings → Appearance**.
+1. Click **Install Woogi** or **Install Woogi Pixel** above, then **Add to Codex** on the installation page. No downloads or terminal commands needed.
+2. Allow your browser to open Codex, then confirm the installation in the app.
+3. Open **Settings → Pets**, select your new pet, and use `/pet` or **Show pet** to display it. Older app versions may put Pets under **Settings → Appearance**. Repeat for the other style if you want both.
+
+If nothing opens, update Codex, launch it once, and check that Pets is available in Settings. An app or account without the pet installation feature cannot use these links. See the official [Pets guide](https://learn.chatgpt.com/docs/pets?surface=app).
+
+<details>
+<summary>Alternative: install with a script</summary>
+
+[Download the ZIP](https://github.com/phykn/woogi/archive/refs/heads/main.zip) and extract it, or run `git clone https://github.com/phykn/woogi.git`. Open a terminal in the extracted `woogi-main` folder (or cloned `woogi` folder), then run:
 
 **Windows (PowerShell)**
 
@@ -35,7 +42,7 @@ sh install.sh pixel
 
 The scripts open Codex's official pet installation link with the selected PNG hosted in this repository. They do not change your Codex settings or select a pet automatically. Internet access is required.
 
-If nothing opens, update Codex, launch it once, and check that Pets is available in Settings. An app or account without the pet installation feature cannot use these links. See the official [Pets guide](https://learn.chatgpt.com/docs/pets?surface=app) and [pet installation link reference](https://learn.chatgpt.com/docs/reference/commands#pets).
+</details>
 
 ## Assets & reuse
 
