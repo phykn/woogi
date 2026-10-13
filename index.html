@@ -14,17 +14,21 @@
       <h1>Meet Woogi.</h1>
       <p class="intro">An animated fox companion for the Codex desktop app.<br>Choose your favorite style below.</p>
     </header>
-    <section class="pets" aria-label="Choose a pet style">
+    <input type="checkbox" id="animate-previews" aria-controls="pet-previews">
+    <label class="motion" for="animate-previews">Play animated previews</label>
+    <section class="pets" id="pet-previews" aria-label="Choose a pet style">
       <article id="woogi">
         <h2>Woogi</h2>
         <p class="variant">Soft 3D style</p>
-        <img class="preview" src="previews/woogi.gif" width="192" height="208" alt="Woogi blinking, waving, jumping, and walking">
+        <img class="preview still" src="previews/woogi.png" width="192" height="208" alt="Woogi, a soft 3D fox">
+        <img class="preview animated" src="previews/woogi.gif" width="192" height="208" alt="Woogi blinking, waving, jumping, and walking">
         <a class="button" href="codex://pets/install?name=Woogi&amp;imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fphykn%2Fwoogi%2Fmain%2Fpets%2Fwoogi%2Fspritesheet.png&amp;spriteVersionNumber=2" aria-label="Add Woogi to Codex">Add to Codex</a>
       </article>
       <article id="woogi-pixel">
         <h2>Woogi Pixel</h2>
         <p class="variant">Crisp pixel art</p>
-        <img class="preview" src="previews/woogi-pixel.gif" width="192" height="208" alt="Woogi Pixel blinking, waving, jumping, and walking">
+        <img class="preview still" src="previews/woogi-pixel.png" width="192" height="208" alt="Woogi Pixel, a pixel-art fox">
+        <img class="preview animated" src="previews/woogi-pixel.gif" width="192" height="208" alt="Woogi Pixel blinking, waving, jumping, and walking">
         <a class="button" href="codex://pets/install?name=Woogi%20Pixel&amp;imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fphykn%2Fwoogi%2Fmain%2Fpets%2Fwoogi-pixel%2Fspritesheet.png&amp;spriteVersionNumber=2" aria-label="Add Woogi Pixel to Codex">Add to Codex</a>
       </article>
     </section>

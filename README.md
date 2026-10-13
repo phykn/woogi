@@ -51,14 +51,14 @@ The scripts open the same Codex installation screen as the buttons. Confirm the 
 
 Both sheets use the **v2 format: 1536 × 2288 px, 8 columns × 11 rows, 192 × 208 px per frame**. Preserve the layout and transparency when editing.
 
-To rebuild the GIFs, run these commands from the repository folder with Python installed:
+To rebuild the animated and still previews, run these commands from the repository folder with Python 3.10+:
 
 ```sh
-python -m pip install Pillow
+python -m pip install -r requirements.txt
 python scripts/preview.py
 ```
 
-Run installer checks with `python -m unittest discover -s tests`. The checks use mock app launchers; PowerShell and a POSIX shell are needed to exercise both installers.
+After installing the requirements, run `python -m unittest discover -s tests` to check installers, preview assets, and page links. App launchers are mocked; each installer's tests run when its shell is available (PowerShell or a POSIX shell).
 
 ## License
 

@@ -1,3 +1,4 @@
+[CmdletBinding()]
 param(
     [ValidateSet('woogi', 'pixel')]
     [string]$Variant = 'woogi',

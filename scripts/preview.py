@@ -1,4 +1,4 @@
-"""Build looping README GIFs from the original v2 sprite sheets (Pillow required)."""
+"""Build animated and still previews from the original v2 sprite sheets."""
 
 from pathlib import Path
 
@@ -12,9 +12,9 @@ SEQUENCE = [(0, 6, 180), (3, 4, 180), (4, 5, 140), (1, 8, 100)]
 
 def build(folder):
     with Image.open(ROOT / 'pets' / folder / 'spritesheet.png') as source:
+        if source.size != (1536, 2288):
+            raise ValueError(f'{folder}: expected a 1536 x 2288 v2 sprite sheet')
         sheet = source.convert('RGBA')
-    if sheet.size != (1536, 2288):
-        raise ValueError(f'{folder}: expected a 1536 x 2288 v2 sprite sheet')
     frames, durations = [], []
     for row, count, duration in SEQUENCE:
         for col in range(count):
@@ -26,6 +26,7 @@ def build(folder):
             durations.append(duration)
     output = ROOT / 'previews' / f'{folder}.gif'
     output.parent.mkdir(exist_ok=True)
+    frames[0].save(output.with_suffix('.png'))
     frames[0].save(
         output,
         save_all=True,
